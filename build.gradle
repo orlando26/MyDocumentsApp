@@ -1,0 +1,28 @@
+
+
+group 'MyDocuments'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile 'org.springframework:spring-context:4.0.5.RELEASE'
+    testCompile 'junit:junit:4.12'
+}
+
+test{
+    testLogging{
+        events 'started', 'passed'
+    }
+}
+
